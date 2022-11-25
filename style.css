@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 80vw;
+}
+
+.sedan {
+  grid-area: 1 / 1 / 2 / 2;
+  background-color: hsl(31, 77%, 52%);
+  padding: 2rem;
+  border-radius: 10px 0 0 10px;
+  height: 400px;
+}
+
+.sedan button {
+  color: hsl(31, 77%, 52%);
+}
+
+.sedan button:hover {
+  background-color: hsl(31, 77%, 52%);
+  color: hsl(0, 0%, 95%);
+}
+
+.suv {
+  align-items: center;
+  grid-area: 1 / 2 / 2 / 3;
+  background-color: hsl(184, 100%, 22%);
+  padding: 2rem;
+  height: 400px;
+}
+
+.suv button {
+  color: hsl(184, 100%, 22%);
+}
+
+.suv button:hover {
+  background-color: hsl(184, 100%, 22%);
+  color: hsl(0, 0%, 95%);
+}
+
+.luxury {
+  grid-area: 1 / 3 / 2 / 4;
+  background-color: hsl(179, 100%, 13%);
+  padding: 2rem;
+  border-radius: 0 10px 10px 0;
+  height: 400px;
+}
+
+.luxury button {
+  color: hsl(179, 100%, 13%);
+}
+
+.luxury button:hover {
+  background-color: hsl(179, 100%, 13%);
+  color: hsl(0, 0%, 95%);
+}
+
+h1,
+h2 {
+  font-weight: 700;
+  font-size: xx-large;
+  color: hsl(0, 0%, 95%);
+  font-family: "Big Shoulders Display", cursive;
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  padding-bottom: 1rem;
+  margin-top: 0px;
+}
+
+button {
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 100px;
+  border-color: hsl(0, 0%, 95%);
+  border-style: solid;
+  padding: 0.8rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .sedan {
+    grid-area: 1 / 1 / 2 / 2;
+    border-radius: 10px 10px 0 0;
+    height: auto;
+  }
+  .suv {
+    grid-area: 2 / 1 / 3 / 2;
+    height: auto;
+  }
+  .luxury {
+    grid-area: 3 / 1 / 4 / 2;
+    border-radius: 0 0 10px 10px;
+    height: auto;
+  }
+}
